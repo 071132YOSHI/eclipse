@@ -9,12 +9,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+
+<style>
+
+.kore{
+
+background-color:red;
+
+}
+
+</style>
+
+
 </head>
 <body>
 
 
 <!-- 2:まず変数にセットする -->
 <c:set var="msg" value="こんにちは" />
+<c:set var="one" value="1" />
 ${msg}
 
 <br>
@@ -43,10 +56,24 @@ ${msg}
 
 <!-- ６：繰り返しの書き方 -->
 
-<指定回数分の繰り返し>
+<!--  指定回数分の繰り返し-->
   <c:forEach var="i" begin="1" end="5" step="1">
     <h${i}>こんにちは！</h${i}>
   </c:forEach>
+
+<!-- 重要：EL式の自由な書き方,これを使って自由にHTMLに挿入する-->
+
+<h${one}> おれは${one}です。<h${one}>
+
+<!-- 条件式を要素にいれるやりかた,要素にいれたい時は""はつける -->
+<br><br>
+<div class="<c:if test="${msg != ''}">kore</c:if>">
+
+iro変わってたらおｋ
+
+</div>
+
+
 
 
 

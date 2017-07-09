@@ -1,0 +1,21 @@
+3つある、そもそも操作の方法は共通！！！
+
+１、リクエスト・・・１取引のみ（一応１応対のみだがディスパッチすると次にリクエスト保存できるから生存期間伸ばせてる）
+２、セッション・・・１ユーザーのみ
+３、アプリケーション・・・ウェブシステム共通
+
+という使い分け。
+
+操作メソッドが４つしかない,nameはすべてペアのキーのこと
+オブジェクト.メソッドでおｋ。
+
+1,ゲットする・・Object getATTribute(name); これは毎回型名で変換しとく。
+2,セットする・・・setAttribute(String name,object value);
+3,けす・・・removeAttribute(name);
+4,もってるnameの一覧返し　Enumeration get AttributeNames();
+
+オブジェクトの取得のやり方
+全てサーブレット
+１、リクエスト・・・引数
+２、セッション・・・
+HttpSession session=rewuest.getSession();

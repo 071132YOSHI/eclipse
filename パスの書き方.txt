@@ -1,0 +1,43 @@
+jspで書くとき：
+jspに対して→"/プロジェクト名/ウェブコンテンツからのパスで拡張子もつける"
+たとえば"/Rensyu_web/jstl_matome.jsp"みたいな感じ
+
+
+サーブレットに飛ばす→"/プロジェクト名/パッケージからのパスっぽい"
+たとえば"/Rensyu_web/Put2"みたいな
+
+
+サーブレットで書くとき
+jspへは→"/ウェブコンテンツからのパスで拡張子もつける"
+たとえば、"/first_put.jsp"みたいな
+
+
+
+
+とばしかたは
+
+jsp→doget()
+１、リンクで送る
+<p><a href="/Rensyu_web/jstl_matome.jsp">jspへのリンク</a>
+
+
+doPost()
+1、フォームタグでサブミットボタンおして送る
+
+<form action="/Rensyu_web/Put2" method="post">
+<input type="text" name="name" size="40">
+<input type="submit" name="age" value= "30"  >
+<input type="hidden" name="sex" value="man">
+</form>
+
+
+サーブレットから飛ばす
+
+1,ちなみにjspにもサーブレットにもどちらにも飛ばせる
+	    RequestDispatcher dispatcher =
+	    		request.getRequestDispatcher("/first_put.jsp");
+	    
+	    dispatcher.forward(request, response);
+
+
+
