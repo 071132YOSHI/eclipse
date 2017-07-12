@@ -1,4 +1,4 @@
-package rensyu;
+package kahentyouhairetu;
 
 import java.util.ArrayList;
 

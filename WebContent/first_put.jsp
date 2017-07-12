@@ -10,13 +10,13 @@
 <body>
 
 <%
-
-session.setAttribute("sex","man");
+//生成されていないオブジェクトはそもそもエラーでる。
+//String number = session.getAttribute("number");
 
 
 
 %>
-リクエストここにでます：${session.getAttribute("unk")}
+リクエストここにでます：${number}
 ${1+1}
 
 <!--１、とりあえず次ページへの飛ばし方 -->

@@ -25,14 +25,23 @@ background-color:red;
 <body>
 
 
-<!-- 2:まず変数にセットする -->
-<c:set var="msg" value="こんにちは" />
+<!-- 2:変数にセットする,これが重要！！ -->
+ここ２です↓<br>
+
+<c:set var="msg" value="こんにちは" scope="session"/>
 <c:set var="one" value="1" />
 ${msg}
+<br>
+
+${sessionScope.msg}
+<br>
+${session.getAttribute("msg")}
+
 
 <br>
 
 <!-- 3:変数を出力する -->
+ここ３です↓
   <c:out value="${msg}" />
 
   <br>
@@ -74,6 +83,7 @@ iro変わってたらおｋ
 </div>
 
 
+<!-- セッションとかの扱い -->
 
 
 

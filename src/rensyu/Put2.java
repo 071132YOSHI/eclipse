@@ -92,8 +92,9 @@ public class Put2 extends HttpServlet {
 
 	    //画面処理をフォワードする。一応リクエストも渡せてるらしい。
 
+	    
 	    HttpSession session=request.getSession();
-	    session.setAttribute("unk", "unk");
+	    session.setAttribute("number", 10);
 
 	    RequestDispatcher dispatcher =
 	    		request.getRequestDispatcher("/first_put.jsp");
