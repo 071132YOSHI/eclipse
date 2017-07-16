@@ -29,10 +29,20 @@ ${1+1}
 
 <!--2、送り方の種類 -->
 
-<p><a href="/Rensyu_web/Put2" >名前入ってますか？</a>
+<%//一つ目、ＧＥＴで渡す、クエリで何個でも渡せるし、
+  //?name=ok&id=oioiとかって書く
+
+%>
+<p><a href="/Rensyu_web/Put2?name=ok" >名前入ってますか？</a>
 <br>
 
 <br>
+
+<%
+//二つ目、ＰＯＳＴで渡す、submit一つだけでいいならこの書き方でいい。formでサブミット囲むだけ
+
+
+%>>
 
 <!-- フォームはサブミットボタンで送信する,nameに対してバリューを代入しまくるだけ -->
 <form action="/Rensyu_web/Put2" method="post">
@@ -41,6 +51,11 @@ ${1+1}
 
 <input type="submit" name="age" value= "30"  >
 </form>
+
+<%  
+//３つめ
+
+%>
 
 
 
