@@ -11,24 +11,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-2ページ目です<br>
-
-<%
-
-//気軽にリクエスト送りたいだけならリンクでこういう風に飛ばしたらくっそらく。
-//とりあえずサーブレットでセッションいれるのとjspでセッションいれるのは成功した。
-//別々のページに遷移ならsession.invalidate();を使ってセッション破棄を１ページ目からしてもいい。
-//けど同一ページなら二回目にきたときにセッションけされるとやばいから使えない。
-//練習なら二ページでやってもいい。デバッグに超時間かかるから。
-
-
-%>
-<a href="/Rensyu_web/FrontController?BUTTON_ID=01&get2=ok" >押してください</a>
-
-
-<br>
-<br>
-
 
 <%
 out.println("ここからセッションです<br>");
@@ -49,6 +31,12 @@ out.println("<br>ここからがリクエストです<br>");
 out.println("リクエストが見えてるか:"+request.getAttribute("get2"));
 
 %>
+
+
+
+
+
+
 
 </body>
 </html>

@@ -2,6 +2,7 @@ package work1;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -47,6 +48,7 @@ public class FrontController extends HttpServlet {
 
 		String buttonId=(String)request.getParameter("BUTTON_ID");
 		String page="/work/two.jsp";
+		HttpSession session =request.getSession();
 
         if(buttonId==null){
 
@@ -58,7 +60,7 @@ public class FrontController extends HttpServlet {
 
 		case "01":
 
-		    HttpSession session =request.getSession();
+
 		    session.setAttribute("get", "true");
 		    String get2=(String)request.getParameter("get2");
 		    session.setAttribute("get2", get2);
@@ -67,12 +69,39 @@ public class FrontController extends HttpServlet {
 
 			break;
 
-		case "a2":
+		case "response_dokomade":
+
+
+
+			page="/Servelet01";
+
 			break;
 
 
 
+		case "action":
 
+			action1 action=new action1();
+			action.getSession(request);
+			page="/work/two.jsp";
+
+			break;
+
+		case "table":
+
+			Pan pan1 =new Pan();
+			Pan pan2 = new Pan("2","3","4","34");
+		    ArrayList<Pan> pans = new ArrayList<Pan>();
+
+		    pans.add(pan1);
+		    pans.add(pan2);
+
+		    session.setAttribute("pan", pans);
+
+
+
+
+			page="/work/table.jsp";
 
 
 

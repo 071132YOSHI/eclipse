@@ -9,6 +9,58 @@
 <body>
 
 
+1,テーブル
+
+<br>リファレンスをこうやって作っていく。
+<br>
+
+<table>
+  <tr>
+    <td>りんご</td>
+    <td>甘酸っぱい</td>
+    <td>おおむね赤</td>
+  </tr>
+  <tr>
+    <td>なつみかん</td>
+    <td>かなり酸っぱいと思う</td>
+    <td>たいてい黄色</td>
+  </tr>
+</table>
+
+<br>
+2,リンク
+
+<a href="mailto:info@htmq.com">メール</a><br>
+<br>画像でもいけます
+<a href="../index.htm"><img src="img/img001.gif" border="0"></a><br>
+
+3,画像の表示
+<br>
+widthとheightは漬けた方がいいらしい。
+
+<img border="0" src="img/img001.gif" width="128" height="128" alt="イラスト1">
+
+<br>
+
+４、リスト
+<br>
+<br>
+
+<ul style="list-style:none;">
+<li>aaaaaa</li>
+<li>bbbbbb</li>
+<li>ccccccc</li>
+</ul>
+
+
+5,input
+
+
+
+
+
+
+
 	<%
 		//input属性のまとめ、これが一番やばい
 	%>

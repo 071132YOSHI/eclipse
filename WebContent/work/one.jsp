@@ -24,19 +24,27 @@
 
 %>
 <a href="/Rensyu_web/FrontController?BUTTON_ID=01&get2=ok" >押してください</a>
-
+<br>
+<% //サーブレット２個目でもリクエスト見えてます %>
+<a href="/Rensyu_web/FrontController?BUTTON_ID=response_dokomade&get2=ok" >レスポンスが２つ目のサーブレットで見えるか</a>
+<br>
+<a href="one_tugi.jsp?BUTTON_ID=01&get2=ok" >jspリンクでリクエストが見えるか</a>
 
 <br>
 <br>
-
+<a href="/Rensyu_web/FrontController?BUTTON_ID=action&get2=ok" >アクション、ＤＡＯからセッションにいれれるか</a>
 
 <%
 //これ丸パクリする。セッション情報の消し方
+//単体テスト用ならこれ必須
 if(session.getAttribute("get")!=null)
 	session.removeAttribute("get");
 if(session.getAttribute("get2")!=null)
 	session.removeAttribute("get2");
-
+if(session.getAttribute("action")!=null)
+	session.removeAttribute("get");
+if(session.getAttribute("dao")!=null)
+	session.removeAttribute("get2");
 
 
 
@@ -52,7 +60,7 @@ while(e.hasMoreElements()) {
     out.println( key + "：" + session.getAttribute(key) + "<br>");
   }
 
-out.println(request.getAttribute("get2"));
+out.println("リクエストが見えてるか:"+request.getAttribute("get2"));
 
 %>
 
